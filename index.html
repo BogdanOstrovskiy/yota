@@ -1286,6 +1286,19 @@
         $(".modal").on("hidden.bs.modal", function(){
             $("body").css({'padding-right': "0", 'overflow-y': "auto"});
         });
+
+        $(function(){
+            var pos = $("nav.navbar").offset().top;
+
+            $(window).scroll(function() {
+                if($(this).scrollTop() >= (pos + 50)) {
+                    $('nav.navbar').addClass('stickytop');
+                }
+                else{
+                    $('nav.navbar').removeClass('stickytop');
+                }
+            });
+        });
     </script>
     <script src="js/scripts.js"></script>
   </body>

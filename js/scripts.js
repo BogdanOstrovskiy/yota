@@ -14,15 +14,16 @@ $(document).ready(function() {
 		var x=$($(this).attr('href'))
 			  .offset().top;
 		$('html, body').animate({'scrollTop':x},400)
-		$('.activ').removeClass('activ');
-		$(this).addClass('activ')
+		$('.navbar-nav li a.active').removeClass('active');
+		$(this).addClass('active')
 	
 	});
 	$(window).scroll(function() {
 		var s_top=$(window).scrollTop();
   		$('section[id]').each(function(){
 			if($(this).offset().top <= (s_top+($( window ).height()/2))){
-				
+				$('.navbar-nav li a.active').removeClass('active');
+				$('a[href="#'+$(this).attr('id')+'"]').addClass('active')
 			}
 		});
 	})
@@ -68,7 +69,7 @@ $(document).ready(function() {
 	});
 
 	//bootstrap-select
-	
+
 	$(document).ready(function () {
 	    var mySelect = $('#first-disabled2');
 	
