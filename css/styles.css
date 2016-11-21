@@ -1,5 +1,5 @@
 body{
-	font: 300 14px/22px 'OpenSan', sans-serif;
+	font: 300 14px/22px 'Open Sans', sans-serif;
 	background: #fff;
 }
 ul{
@@ -7,7 +7,7 @@ ul{
 	padding: 0;
 	list-style-type: none;
 }
-.clearfix:after {
+.clearfix::after {
     visibility: hidden;
     display: block;
     font-size: 0;
@@ -589,6 +589,7 @@ a.button-two,
 	width: 0;
 	height: 0;
 }
+.diagram-box .carousel-indicators li.passed::after,
 .diagram-box .carousel-indicators li.active::after{
 	-webkit-transition: all 2s;
 	transition: all 2s;
@@ -602,6 +603,7 @@ a.button-two,
 }
 .diagram-box .carousel-indicators li:last-child::after,
 .diagram-box .carousel-indicators li.active:last-child::after,
+.diagram-box .carousel-indicators li.passed:last-child::after,
 .diagram-box .carousel-indicators li:last-child::before{
 	display: none;
 }
@@ -625,6 +627,7 @@ a.button-two,
 	        transform: translateX(-50%);
 	line-height: normal;
 }
+.diagram-box .carousel-indicators li.passed,
 .diagram-box .carousel-indicators li.active{
 	background: #ff7c00;
 	background: -webkit-linear-gradient(left, #ff7c00 0%, #ff6200 100%);
@@ -632,6 +635,7 @@ a.button-two,
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7c00', endColorstr='#ff6200',GradientType=1 );
 	box-shadow: 0 5px 5.6px 0.4px rgba(168, 71, 0, 0.15);
 }
+.diagram-box .carousel-indicators li.passed span,
 .diagram-box .carousel-indicators li.active span{
 	background-color: transparent;
 }
@@ -1170,6 +1174,42 @@ input[type="file"]{
 .technology-img img{
 	width: 100%;
 }
+
+/*-----------------fade-bootstrap-----------------*/
+.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 100%;
+}
+
+
 
 
 

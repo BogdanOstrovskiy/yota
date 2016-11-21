@@ -89,4 +89,22 @@ $(document).ready(function() {
   	  	});
   	});
 
+	//---------------
+	$('#carousel_diagram').on('slide.bs.carousel',function(e){
+
+  var ix = $(e.relatedTarget).index()+1;
+  for(i=ix;0<i;i--){
+    $('#carousel_diagram .carousel-indicators > li:nth-child('+i+')').addClass('passed');
+  }
+  // можешь не давать ему от сюда
+   for(i=ix+1;6>i;i++){
+    $('#carousel_diagram .carousel-indicators > li:nth-child('+i+')').removeClass('passed');
+  }
+  //до сюда, типо как дз
+  //класс passed должен иметь все тоже самое что и active
+});
+
+
+
+
 });
