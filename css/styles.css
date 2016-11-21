@@ -356,6 +356,10 @@ a.button-two,
 .about ul.list-item li{
 	font-weight: bold;
 }
+.about-department{
+	position: relative;
+	z-index: 1;
+}
 .about-department > span{
 	color: #636363;
 	font-weight: bold;
@@ -519,7 +523,7 @@ a.button-two,
 	margin-right: -15px;
 }
 .diagram-box .carousel-control{
-	bottom: 65px;
+	bottom: 15px;
 	left: 85px;
 	top: auto;
 	width: auto;
@@ -1151,4 +1155,77 @@ input[type="file"]{
 }
 .languages-box ul li span{
 	vertical-align: middle;
+}
+
+
+.list-item{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+}
+.technology-img img{
+	width: 100%;
+}
+
+
+
+@media only screen and (max-width: 1170px){
+	.technology-box{
+		padding: 185px 0 70px;	
+	}
+	.footer-contact{
+		padding: 40px 40px 20px;
+	}
+}
+@media only screen and (max-width: 992px){
+	.list-item{
+		/*flex-flow: row wrap;*/
+	}
+	.list-item li i{
+		font-size: 18px;
+		vertical-align: middle;
+		line-height: 18px;
+	}
+	.list-item li span{
+		font-size: 16px;
+		vertical-align: middle;
+		line-height: 18px;
+		/*flex-basis: 50%;*/
+	}
+	.technology-box{
+		padding: 130px 0 70px;	
+	}
+	.technology-box-info i{
+		height: 25px;
+		font-size: 18px;
+	}
+	.diagram-box .carousel-indicators{
+		padding: 0 20px;
+	}
+	.diagram-box .carousel-indicators li::before{
+		width: calc(100% * 2);
+	}
+	.diagram-box .carousel-indicators li.active::after{
+		transform: scaleX(120);
+	}
+	.footer-contact{
+		padding: 40px 20px 20px;
+	}
+	.footer-nav{
+		padding-bottom: 30px;
+	}
+	.footer-nav span{
+		font-size: 16px;
+	}
+	.footer-nav a{
+		font-size: 12px;
+	}
+}
+
+
+@media only screen and (max-width: 768px){
 }
