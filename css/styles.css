@@ -55,6 +55,7 @@ h1{
 	position: relative;
 	font-weight: bold;
 	margin: 0;
+	letter-spacing: -2px;
 }
 h1::after{
 	content: '';
@@ -66,12 +67,14 @@ h1::after{
 	height: 2px;
 	width: 122px;
 	background-color: #fff;
+	letter-spacing: -2px;
 }
 h2{
 	font-size: 48px;
 	color: #ff5b00;
 	margin-bottom: 40px;
 	font-weight: 700;
+	letter-spacing: -2px;
 }
 h3.dark-bg,
 h2.dark-bg,
@@ -81,6 +84,7 @@ h2.dark-bg,
 h3{
 	color: #636363;
 	font-weight: 700;
+	letter-spacing: -2px;
 }
 .bootstrap-select>.dropdown-toggle{
 	height: 100%;
@@ -381,7 +385,7 @@ a.button-two,
 }
 .about-box .visual{
 	height: 500px;
-	width: 340px;
+	width: 370px;
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -400,6 +404,7 @@ a.button-two,
 .about .material-icons{
 	color: #ff5b00;
 	margin-right: 8px;
+	font-size: 20px;
 	vertical-align: bottom;
 }
 .about ul.list-item li{
@@ -413,8 +418,11 @@ a.button-two,
 	color: #636363;
 	font-weight: bold;
 	display: block;
-	font-size: 20px;
+	font-size: 16px;
 	margin-bottom: 20px;
+}
+.about-department li > span{
+	font-size: 16px;
 }
 .about-department > ul{
 	margin-bottom: 35px;
@@ -714,11 +722,14 @@ a.button-two,
 	background-color: #dc5e7b;
 	padding: 80px 0 70px;
 }
+.advantages h2{
+	margin-bottom: 70px;
+}
 .advantages-box{
 	margin-bottom: 50px;
 }
 .advantages-box li{
-	margin-bottom: 50px;
+	margin-bottom: 25px;
 }
 .advantages-box-text{
 	overflow: hidden;
@@ -751,7 +762,7 @@ a.button-two,
 /*--------reviews-section-----------*/
 .reviews {
 	background-color: #f6f6f6;
-	padding: 100px 0 70px;
+	padding: 75px 0;
 }
 .reviews .diagram-box{
 	margin-top: 0;
@@ -818,7 +829,10 @@ a.button-two,
 	background: -webkit-linear-gradient(left,  #ff6400 0%,#9329a2 100%);
 	background: linear-gradient(to right,  #ff6400 0%,#9329a2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6400', endColorstr='#9329a2',GradientType=1 );
-	padding: 100px 0 80px;
+	padding: 61px 0 85px;
+}
+.contacts h2{
+	margin-bottom: 25px;
 }
 .contacts h2 + p{
 	font-size: 18px;
