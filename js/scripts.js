@@ -105,6 +105,47 @@ $(document).ready(function() {
 });
 
 
+        $('#carousel_main').carousel({
+            interval: 6000,
+            pause: 'hover',
+            wrap: true
+        });
+        $("#carousel_diagram").carousel({
+            interval: false,
+            pause: 'hover',
+            wrap: false
+        }); 
+        $("#carousel_reviews").carousel({
+            interval: false,
+            pause: 'hover',
+            wrap: true
+        });
+
+        $(".modal").on("show.bs.modal", function(){
+            var $bodyWidth = $("body").width();
+            $("body").css({'overflow-y': "hidden"}).css({'padding-right': ($("body").width()-$bodyWidth)});
+        });
+        
+        $(".modal").on("hidden.bs.modal", function(){
+            $("body").css({'padding-right': "0", 'overflow-y': "auto"});
+        });
+
+        //slick nav-bar and button 
+        $(function(){
+            var pos = $("nav.navbar").offset().top;
+
+            $(window).scroll(function() {
+                if($(this).scrollTop() >= (pos + 50)) {
+                    $('nav.navbar').addClass('stickytop');
+                    $('.button_hide').fadeIn().css({'display':'block'});
+                }
+                else{
+                    $('nav.navbar').removeClass('stickytop');
+                    $('.button_hide').fadeOut();
+                }
+            });
+        });
+    
 
 
 });
