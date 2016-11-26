@@ -15,8 +15,12 @@ $(document).ready(function() {
 			  .offset().top;
 		$('html, body').animate({'scrollTop':x},400)
 		$('.navbar-nav li a.active').removeClass('active');
-		$(this).addClass('active')
-	
+		$(this).addClass('active');
+		$('#navbarCollapse').slideUp(200, function() {
+			$(this).removeClass('in').removeAttr('style');
+			$('.navbar-toggle').addClass('collapsed').attr({"aria-expanded":"false"})
+
+		});
 	});
 	$(window).scroll(function() {
 		var s_top=$(window).scrollTop();
@@ -41,7 +45,7 @@ $(document).ready(function() {
   		  	  	breakpoint: 1170,
   		  	  	settings: {
   		  	  	  	slidesToShow: 4,
-  		  	  	  	slidesToScroll: 4,
+  		  	  	  	slidesToScroll: 1,
   		  	  	  	infinite: true,
   		  	  	  	dots: false
   		  	    }
@@ -50,15 +54,16 @@ $(document).ready(function() {
   		  	  	breakpoint: 992,
   		  	  	settings: {
   		  	    	slidesToShow: 3,
-  		  	    	slidesToScroll: 3,
+  		  	    	slidesToScroll: 1,
   		  	    	dots: false
   		  	  	}
   		  	},
   		  	{
-  		  	  	breakpoint: 320,
+  		  	  	breakpoint: 768,
   		  	  	settings: {
   		  	    	slidesToShow: 3,
   		  	    	slidesToScroll: 3,
+  		  	    	arrows: false,
   		  	    	dots: true
   		  	  	}
   		  	}
@@ -67,7 +72,19 @@ $(document).ready(function() {
   		  	// instead of a settings object
   		]
 	});
+	//check of conditions for a slider-2
 
+	if ($(this).width() <= 768) {
+		
+		$('.mobile-carousel').slick({
+  			dots: true,
+  			infinite: false,
+  			speed: 300,
+  			arrows: false,
+  			slidesToShow: 1,
+  			slidesToScroll: 1,
+  		});
+	}
 	//bootstrap-select
 
 	$(document).ready(function () {

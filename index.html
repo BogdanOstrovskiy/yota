@@ -33,15 +33,16 @@
         <header id="header" class="header">
             <div class="container">
                 <div class="row header-box">
-                    <div class="logo-box col-sm-2 text-center">
+                    <div class="logo-box col-md-2 text-center">
                         <a href="#"><img src="images/logo.png" alt="image description"></a>
                     </div>
-                    <div class="col-sm-3 brand-name">
+                    <div class="col-md-3 brand-name">
                         <strong>TRANSLATION AGENCY</strong>
                     </div>
-                    <div class="col-sm-7 col-lg-6 col-lg-offset-2">
+                    <a href="#" class="button button-two visible-xs button-mobile" data-toggle="modal" data-target="#popup-order"><i class="material-icons">add_circle</i>Заказать</a>
+                    <div class="col-md-7 col-lg-6 col-lg-offset-2 hidden-xs">
                         <div class="row header-contact-wrap">
-                            <div class="col-sm-6 text-right header-contact-info hidden-xs">
+                            <div class="col-sm-6 text-right header-contact-info">
                                 <a href="tel:+1234567890">+38 (067) 5743309</a>
                                 <ul>
                                     <li><a href="#">Viber</a></li>
@@ -104,17 +105,19 @@
                     </a>
                 </div>
                 <div class="main-menu">
-                    <nav role="navigation" class="container-fluide navbar navbar-inverse navbar-fixed-bottom nav-style">
+                    <nav role="navigation" class="container-fluide navbar navbar-inverse nav-style">
                         <div class="navbar-header">
-                            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
+                            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle collapsed"></button>
                         </div>
                         <div id="navbarCollapse" class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-centered container">
+                                <li class="text-center mobile-contact-info visible-xs">
+                                    <a href="tel:+1234567890">+38 (067) 5743309</a>
+                                    <ul>
+                                        <li><a href="#">Viber</a></li>
+                                        <li><a href="#">Whatsup</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#about">О Компании</a></li>
                                 <li><a href="#services">Услуги</a></li>
                                 <li><a href="#technology">Технологии</a></li>
@@ -122,7 +125,7 @@
                                 <li><a href="#advantages">Преимущеста</a></li>
                                 <li><a href="#reviews">Отзывы</a></li>
                                 <li><a href="#contacts">Контакты</a></li>
-                                <li><a href="#" class="button button-two button_hide" data-toggle="modal" data-target="#popup-order"><i class="material-icons">add_circle</i>Заказать</a></li>
+                                <li><a href="#" class="button button-two button_hide hidden-xs" data-toggle="modal" data-target="#popup-order"><i class="material-icons">add_circle</i>Заказать</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -134,8 +137,8 @@
                     <div class="about-box shadow-slyle">
                         <div class="row">
                             <div class="col-sm-offset-1 col-sm-8 col-md-7 about-department">
-                                <strong>Yota Global </strong>
-                                <p>является сертифицированным бюро переводов согласно системе управления качеством ISO 9001. Мы предоставляем широкий спектр переводческих услуг (как письменное так и устное сопровождение) для наших клиентов, включая сопутствующее юридическое сопровождение при выполнении перевода – нотариальное заверение, проставление апостиля, легализация, нострификация документов, получение справок о несудимости и прочее.</p>
+                                
+                                <p><strong>Yota Global </strong>является сертифицированным бюро переводов согласно системе управления качеством ISO 9001. Мы предоставляем широкий спектр переводческих услуг (как письменное так и устное сопровождение) для наших клиентов, включая сопутствующее юридическое сопровождение при выполнении перевода – нотариальное заверение, проставление апостиля, легализация, нострификация документов, получение справок о несудимости и прочее.</p>
                                 <span>Мы имеем представительства в:</span>
                                 <ul class="row">
                                     <li class="col-sm-6 col-md-5">
@@ -182,7 +185,7 @@
                     <!-- Nav tabs -->
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab-box-1">
-                            <div class="row">
+                            <div class="row hidden-xs">
                                 <p class="col-sm-10 col-sm-offset-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excep <a href="#">Подробнее...</a></p>
                             </div>
                             <div class="services-item text-center">
@@ -253,7 +256,7 @@
                             </div>
                         </div>
                         <div class="tab-pane" id="tab-box-2">
-                            <div class="row">
+                            <div class="row hidden-xs">
                                 <p class="col-sm-10 col-sm-offset-1">Lorem ipsum dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat esse cillum dolore nulla pariatur. Excep <a href="#">Подробнее...</a></p>
                             </div>
                             <div class="services-item text-center">
@@ -337,7 +340,7 @@
                         <div class="technology-img">
                             <img src="images/bg-technology.png" alt="image description">
                         </div>
-                        <div class="row technology-box-info">
+                        <div class="row technology-box-info mobile-carousel">
                             <div class="col-sm-5 col-sm-offset-1">
                                 <ul>
                                     <li class="clearfix"><i class="material-icons">&#xE86C;</i><span>Управление переводческими проектами <a href="#">XTRF</a></span></li>
@@ -365,18 +368,18 @@
                         <div id="carousel_diagram" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
-                                <li data-target="#carousel_diagram" data-slide-to="0" class="active"><span>1</span><strong>Просчет</strong></li>
-                                <li data-target="#carousel_diagram" data-slide-to="1"><span>2</span><strong>Подтверждение</strong></li>
-                                <li data-target="#carousel_diagram" data-slide-to="2"><span>3</span><strong>Оплата</strong></li>
-                                <li data-target="#carousel_diagram" data-slide-to="3"><span>4</span><strong>Перевод</strong></li>
-                                <li data-target="#carousel_diagram" data-slide-to="4"><span>5</span><strong>Передача</strong></li>
+                                <li data-target="#carousel_diagram" data-slide-to="0" class="active"><span>1</span><strong class="hidden-xs">Просчет</strong></li>
+                                <li data-target="#carousel_diagram" data-slide-to="1"><span>2</span><strong class="hidden-xs">Подтверждение</strong></li>
+                                <li data-target="#carousel_diagram" data-slide-to="2"><span>3</span><strong class="hidden-xs">Оплата</strong></li>
+                                <li data-target="#carousel_diagram" data-slide-to="3"><span>4</span><strong class="hidden-xs">Перевод</strong></li>
+                                <li data-target="#carousel_diagram" data-slide-to="4"><span>5</span><strong class="hidden-xs">Передача</strong></li>
                             </ol>
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner container" role="listbox">
                                 <div class="item diagram-box-content row active">
                                     <div class="col-sm-6 col-sm-offset-1 diagram-box-text">
                                         <h3>1. Просчет перевода</h3>
-                                        <span>1<span>/5</span></span>
+                                        <span class="hidden-xs">1<span>/5</span></span>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
                                     </div>
                                     <div class="col-sm-5 text-right diagram-box-img hidden-xs">
@@ -386,7 +389,7 @@
                                 <div class="item diagram-box-content row">
                                     <div class="col-sm-6 col-sm-offset-1 diagram-box-text">
                                         <h3>2. Подтверждение заказа</h3>
-                                        <span>2<span>/5</span></span>
+                                        <span class="hidden-xs">2<span>/5</span></span>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
                                     </div>
                                     <div class="col-sm-5 text-right diagram-box-img hidden-xs">
@@ -396,7 +399,7 @@
                                 <div class="item diagram-box-content row">
                                     <div class="col-sm-6 col-sm-offset-1 diagram-box-text">
                                         <h3>3. Оплата</h3>
-                                        <span>3<span>/5</span></span>
+                                        <span class="hidden-xs">3<span>/5</span></span>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
                                     </div>    
                                     <div class="col-sm-5 text-right diagram-box-img hidden-xs">    
@@ -406,7 +409,7 @@
                                 <div class="item diagram-box-content row">
                                     <div class="col-sm-6 col-sm-offset-1 diagram-box-text">
                                         <h3>4. Перевод</h3>
-                                        <span>4<span>/5</span></span>
+                                        <span class="hidden-xs">4<span>/5</span></span>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
                                     </div>    
                                     <div class="col-sm-5 text-right diagram-box-img hidden-xs">
@@ -416,7 +419,7 @@
                                 <div class="item diagram-box-content row">
                                     <div class="col-sm-6 col-sm-offset-1 diagram-box-text">    
                                         <h3>5. Передача перевода</h3>
-                                        <span>5<span>/5</span></span>
+                                        <span class="hidden-xs">5<span>/5</span></span>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
                                     </div>        
                                     <div class="col-sm-5 text-right diagram-box-img hidden-xs">
@@ -444,7 +447,7 @@
                 <div class="container">
                     <h2 class="text-center dark-bg">Преимущества</h2>
                     <div class="row">
-                        <div class="advantages-box dark-bg col-sm-10 col-sm-offset-1">
+                        <div class="advantages-box dark-bg col-sm-10 col-sm-offset-1 mobile-carousel">
                             <ul class="row">
                                 <li class="clearfix col-sm-6">
                                     <div class="advantages-box-img">
@@ -519,14 +522,6 @@
                     <h2 class="text-center">Отзывы</h2>
                     <div class="diagram-box shadow-slyle">
                         <div id="carousel_reviews" class="carousel slide" data-ride="carousel">
-                            <!-- Indicators -->
-                            <!-- <ol class="carousel-indicators">
-                                <li data-target="#carousel_reviews" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel_reviews" data-slide-to="1"></li>
-                                <li data-target="#carousel_reviews" data-slide-to="2"></li>
-                                <li data-target="#carousel_reviews" data-slide-to="3"></li>
-                                <li data-target="#carousel_reviews" data-slide-to="4"></li>
-                            </ol> -->
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner container" role="listbox">
                                 <div class="item diagram-box-content row active">
@@ -728,7 +723,7 @@
                                 <img src="images/brand-4.png" alt="image description">
                             </div>
                         </div>
-                        <a class="button" href="#" data-toggle="modal" data-target="#popup-reviews">Оставить отзыв</a>
+                        <a class="button hidden-xs" href="#" data-toggle="modal" data-target="#popup-reviews">Оставить отзыв</a>
                     </div>
                 </div>
             </section>
