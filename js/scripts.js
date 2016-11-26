@@ -16,7 +16,7 @@ $(document).ready(function() {
 		$('html, body').animate({'scrollTop':x},400)
 		$('.navbar-nav li a.active').removeClass('active');
 		$(this).addClass('active');
-		$('#navbarCollapse').slideUp(200, function() {
+		$('#navbarCollapse').slideUp(400, function() {
 			$(this).removeClass('in').removeAttr('style');
 			$('.navbar-toggle').addClass('collapsed').attr({"aria-expanded":"false"})
 

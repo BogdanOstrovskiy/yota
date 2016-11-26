@@ -1865,10 +1865,15 @@ body,
 		bottom: auto;
 		top: -75px;
 		width: 100%;
+		justify-content: center;
 	}
 	.diagram-box .carousel-indicators li{
-		width: 33px;
-		height: 33px;
+		width: 34px;
+		height: 34px;
+		text-align: center;
+	}
+	.diagram-box .carousel-indicators li + li{
+		margin-left: 45px;
 	}
 	.diagram-box .carousel-indicators li::before{
 		width: 50px;
@@ -1895,6 +1900,8 @@ body,
 		line-height: 25px;
 		font-size: 13px;
 		font-weight: bold;
+		display: block;
+		margin: 0 auto;
 	}
 	.diagram-box .carousel-indicators li.passed,
 	.diagram-box .carousel-indicators li.active{
@@ -1911,10 +1918,10 @@ body,
 		bottom: 0;
 	}
 	.diagram-box .carousel-control.right{
-		left: 55%;
+		left: 50%;
 	}
 	.diagram-box .carousel-control.left{
-		left: 45%;
+		left: 40%;
 	}
 /*---------advantages----------*/
 	.advantages {
@@ -1994,10 +2001,36 @@ body,
 	.skype-box-text a:last-of-type{
 		margin-bottom: 25px;
 	}
+	.contacts-info{
+		margin-bottom: 0;
+	}
+	.contacts .button.button-two{
+		font-size: 16px;
+		height: 43px;
+		line-height: 43px;
+		background: #fff;
+		color: #ff5b00;
+	}
+	.contacts .button.button-two i{
+		line-height: 43px;
+	}
+
+
 	.footer{
 		background-color: #fff;
 	}
+	.footer-contact{
+		    padding: 40px 0 20px;
+	}
 
+}
+@media only screen and (max-width: 440px){
+	.diagram-box .carousel-indicators{
+		justify-content: center;
+	}
+	.diagram-box .carousel-indicators li + li{
+		margin-left: 25px;
+	}
 }
 @media only screen and (max-width: 320px){
 	.technology-box{
@@ -2006,6 +2039,12 @@ body,
 	}
 	.technology-img {
 	    top: 0;
+	}
+	.diagram-box .carousel-indicators{
+		justify-content: space-between;
+	}
+	.diagram-box .carousel-indicators li + li{
+		margin-left: 0;
 	}
 }
 
