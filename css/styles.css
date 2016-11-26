@@ -1795,9 +1795,8 @@ body,
 		border: 2px solid transparent;
 		font-size: 12px;
 		line-height: 14px;
-		
 		cursor: pointer;
-    	padding: 5px;
+    	padding: 5px 15px;
     	border-radius: 25px;
 	}
 	.services .nav-tabs>li:last-child a{
@@ -1942,6 +1941,27 @@ body,
 		line-height: 42px;
 		padding: 0 22px;
 	}
+	.advantages-box-img{
+		width: 40px;
+	}
+	.advantages-box-img i{
+		font-size: 36px;
+		line-height: 38px;
+	}
+	.advantages-box-text{
+		padding-left: 15px;
+	}
+	.advantages-box-text h3{
+		font-size: 15px;
+	}
+	.advantages-box-text p{
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.advantages .bottom-block p i{
+		font-size: 20px;
+		line-height: 22px;
+	}
 	/*-----------reviews------------*/
 
 	.reviews {
@@ -2021,6 +2041,72 @@ body,
 	}
 	.footer-contact{
 		    padding: 40px 0 20px;
+	}
+	.footer-social{
+		justify-content: space-around;
+	}
+
+/*------------popup--------------*/
+	a:focus{
+		outline: 0;
+	}
+	.form-order{
+		padding: 0 15px;
+	}
+	#popup-order .form-group .form-control{
+		margin-bottom: 10px;
+	}
+	.form-order .form-control{
+		font-size: 14px;
+		height: 40px;
+	}
+	.modal-content{
+		padding: 0 !important;
+	}
+	.popup-services .modal-body{
+		padding: 30px 15px 20px;
+	}
+	.popup-services .modal-header i{
+		font-size: 50px;
+		margin-bottom: 20px;
+	}
+	.modal-header-text strong{
+		font-size: 24px;
+		line-height: 26px;
+	}
+	.popup-services .modal-header{
+		height: 200px;
+	}
+	.languages-box ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    height: 35px;
+    max-width: 50%;
+    font-size: 12px;
+    padding: 1px 10px;
+	}
+	.drop-zone span{
+		font-size: 14px;
+	}
+	.popup-order .button.button-two,
+	.popup-order .button.button-two,
+	.modal-footer button.button,
+	.form-order .button.button-two{
+		font-size: 14px;
+		height: 42px;
+		line-height: 42px;
+		padding: 0 22px;
+	}
+	.modal-content .modal-footer button[type="button"] span, 
+	.modal-content .modal-header button[type="button"] span{
+		font-size: 14px;
+	}
+	#popup-success .modal-body{
+		padding: 0 15px;
+	}
+	#popup-callback .modal-body-text{
+		padding: 0 15px;
 	}
 
 }
