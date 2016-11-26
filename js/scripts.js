@@ -59,7 +59,7 @@ $(document).ready(function() {
   		  	  	}
   		  	},
   		  	{
-  		  	  	breakpoint: 768,
+  		  	  	breakpoint: 767,
   		  	  	settings: {
   		  	    	slidesToShow: 3,
   		  	    	slidesToScroll: 3,
@@ -74,7 +74,7 @@ $(document).ready(function() {
 	});
 	//check of conditions for a slider-2
 
-	if ($(this).width() <= 768) {
+	if ($(this).width() <= 767) {
 		
 		$('.mobile-carousel').slick({
   			dots: true,
@@ -109,17 +109,14 @@ $(document).ready(function() {
 	//---------------
 	$('#carousel_diagram').on('slide.bs.carousel',function(e){
 
-  var ix = $(e.relatedTarget).index()+1;
-  for(i=ix;0<i;i--){
-    $('#carousel_diagram .carousel-indicators > li:nth-child('+i+')').addClass('passed');
-  }
-  // можешь не давать ему от сюда
-   for(i=ix+1;6>i;i++){
-    $('#carousel_diagram .carousel-indicators > li:nth-child('+i+')').removeClass('passed');
-  }
-  //до сюда, типо как дз
-  //класс passed должен иметь все тоже самое что и active
-});
+		  var ix = $(e.relatedTarget).index()+1;
+		  for(i=ix;0<i;i--){
+		    $('#carousel_diagram .carousel-indicators > li:nth-child('+i+')').addClass('passed');
+		  }
+		   for(i=ix+1;6>i;i++){
+		    $('#carousel_diagram .carousel-indicators > li:nth-child('+i+')').removeClass('passed');
+		  }
+		});
 
 
         $('#carousel_main').carousel({
@@ -148,6 +145,9 @@ $(document).ready(function() {
         });
 
         //slick nav-bar and button 
+        
+    if (!($(window).width() <= 767)) {
+        
         $(function(){
             var pos = $("nav.navbar").offset().top;
 
@@ -163,6 +163,6 @@ $(document).ready(function() {
             });
         });
     
-
+	};
 
 });
