@@ -185,6 +185,7 @@ a.button-two,
 	font-size: 16px;
 	font-weight: 600;
 	letter-spacing: .3ex;
+	white-space: nowrap;
 }
 .nav a.button,
 .header-box .button{
@@ -1537,6 +1538,9 @@ body,
 	}
 }
 @media only screen and (max-width: 1170px){
+	.header-box .brand-name strong{
+		white-space: initial;
+	}
 	.technology-box{
 		padding: 185px 0 70px;	
 	}
@@ -1717,18 +1721,11 @@ body,
 	.popup-video .modal-content{
 		padding-bottom: 0;
 	}
-	/*.logo-box img{
-		width: 98px;
-		height: 45px;
-	}*/
 	.header-box .brand-name strong{
 		font-size: 14px;
     	letter-spacing: .7px;
     	display: block;
 	}
-	/*.logo-box{
-		width: 96px;
-	}*/
 }
 
 
