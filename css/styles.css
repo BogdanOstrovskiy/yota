@@ -2475,8 +2475,13 @@ body,
 		left: 120px;
 	}
 }
-/* @media only screen and (max-width: 320px), all and (orientation: landscape){
+ @media only screen and (max-width: 767px), all and (orientation: landscape){
 	.navbar-inverse .navbar-nav > li > a {
-	    font-size: 15px;
+	    line-height: 26px;
 	}
-} */
+	#popup-video .modal-dialog{
+		width: 100%;
+		height: auto;
+	}
+
+} 
