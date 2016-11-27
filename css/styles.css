@@ -22,6 +22,10 @@ a:focus{
  	display: block; 
  	height: 1%;
 }
+.modal{
+	overflow-x: hidden;
+    	overflow-y: auto;
+}
 #wrapper{
 	position: relative;
 	overflow: hidden;
@@ -202,8 +206,8 @@ a.button-two,
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-flow: row wrap;
-	    flex-flow: row wrap;
+	-ms-flex-flow: row nowrap;
+	    flex-flow: row nowrap;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
@@ -621,6 +625,10 @@ a.button-two,
 .diagram-box-img img{
 	margin-right: -15px;
 }
+.diagram-box .carousel-inner>.item.next.left, 
+.diagram-box .carousel-inner>.item.prev.right{
+	left: 15px;
+}
 .diagram-box .carousel-control{
 	bottom: 45px;
 	left: 90px;
@@ -663,6 +671,7 @@ a.button-two,
 	text-align: center;
 	position: relative;
 	margin: 0;
+	border: none;
 }
 .diagram-box .carousel-indicators li::before{
 	content: '';
@@ -1131,6 +1140,10 @@ input[type="file"]{
 	color: #a5a5a5;
 }
 /*------popup-------*/
+.modal-content{
+	border-radius: 0;
+}
+
 #popup-video button[type="button"],
 #popup-video strong{
 	font-size: 20px;
@@ -1442,10 +1455,34 @@ body,
 	display: inline-block;
 }
 
-
+@media only screen and (max-width: 1200px){
+	.header-box .button{
+   		white-space: nowrap;
+   	 	font-size: 14px;
+   	 	padding: 0 18px;
+   	 	letter-spacing: -.3px;
+		height: 45px;
+   		line-height: 45px;
+		margin: 0;
+	}
+	.header-box .button i{
+		line-height: 45px;
+	}
+}
 @media only screen and (max-width: 1170px){
 	.technology-box{
 		padding: 185px 0 70px;	
+	}
+	.header-box .button{
+   		white-space: nowrap;
+   	 	font-size: 14px;
+   	 	padding: 0 18px;
+   	 	letter-spacing: -.3px;
+		height: 45px;
+    		line-height: 45px;
+	}
+	.header-box .button i{
+		line-height: 45px;
 	}
 	.footer-contact{
 		padding: 40px 40px 20px;
@@ -1453,7 +1490,15 @@ body,
 	.navbar-inverse.stickytop .navbar-nav > li > a{
 		font-size: 14px;
 		padding-left: 10px;
-    	padding-right: 10px;
+    		padding-right: 10px;
+	}
+	.navbar-inverse.stickytop .navbar-nav > li >a.button{
+	    	height: 40px;
+    	 	margin-top: 12px;
+    		line-height: 40px;	
+	}
+	.navbar-inverse.stickytop .navbar-nav > li >a.button i{
+    		line-height: 40px;	
 	}
 	.diagram-box-text {
 	    position: relative;
@@ -1822,9 +1867,14 @@ body,
 		width: 96px;
 	}
 	.header-box{
-		flex-flow: column nowrap;
-		align-items: flex-start;
-		justify-content: center;
+		-ms-flex-flow: column nowrap;
+		    flex-flow: column nowrap;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 	#header{
 		padding: 0;
@@ -1893,14 +1943,20 @@ body,
     	
 	}
 	.services .nav-tabs{
-		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
 		display: -o-flex;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-flow: row nowrap;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-ms-flex-flow: row nowrap;
+		    flex-flow: row nowrap;
 	}
 	.services-item{
 		padding: 0;
@@ -1909,19 +1965,26 @@ body,
 		margin-bottom: 0;
 	}
 	.services-item a{
-		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
 		display: -o-flex;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-flow: row nowrap;
-		justify-content: flex-start;
-		align-items: center;
+		-ms-flex-flow: row nowrap;
+		    flex-flow: row nowrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 		margin: 0 0 15px 0;
 	}
 	.services-item a > span{
 		text-align: left;
-		flex-shrink: 1;
+		-ms-flex-negative: 1;
+		    flex-shrink: 1;
 	}
 	.services .nav-tabs>li>a, 
 	.services .nav-tabs>li>a:hover{
@@ -1941,7 +2004,8 @@ body,
 		height: 52px;
 		border: 4px solid transparent;
 		margin-right: 15px;
-		flex-shrink: 0;
+		-ms-flex-negative: 0;
+		    flex-shrink: 0;
 	}
 	.services-item-icon + span{
 		font-size: 14px;
@@ -2034,7 +2098,9 @@ body,
 		bottom: auto;
 		top: -75px;
 		width: 100%;
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 	.diagram-box .carousel-indicators li{
 		width: 34px;
@@ -2270,10 +2336,28 @@ body,
 		    padding: 40px 0 20px;
 	}
 	.footer-social{
-		justify-content: space-around;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
 	}
 
 /*------------popup--------------*/
+	.modal-dialog{
+		margin: 0;
+		border: none;
+		width: 100%;
+		height: auto;
+	}
+	.modal-content{
+		min-height: 100%;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+	}
+	#popup-video .modal-dialog,
+	#popup-success .modal-dialog{
+		width: 100%;
+		height: 100%;
+	}
 	.form-order{
 		padding: 0 15px;
 	}
@@ -2354,7 +2438,9 @@ body,
 }
 @media only screen and (max-width: 440px){
 	.diagram-box .carousel-indicators{
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 	.diagram-box .carousel-indicators li + li{
 		margin-left: 25px;
@@ -2375,7 +2461,9 @@ body,
 	    top: -20px;
 	}
 	.diagram-box .carousel-indicators{
-		justify-content: space-between;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
 	}
 	.diagram-box .carousel-indicators li + li{
 		margin-left: 0;
@@ -2387,10 +2475,8 @@ body,
 		left: 120px;
 	}
 }
-@media only screen and (max-width: 320px), all and (orientation: landscape){
+/* @media only screen and (max-width: 320px), all and (orientation: landscape){
 	.navbar-inverse .navbar-nav > li > a {
 	    font-size: 15px;
-	    line-height: 28px;
 	}
-}
-
+} */

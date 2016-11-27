@@ -30,7 +30,42 @@ $(document).ready(function() {
 				$('a[href="#'+$(this).attr('id')+'"]').addClass('active')
 			}
 		});
-	})
+	});
+	//carousel touch swipe
+	var hammer = new Hammer(document.querySelector('.carousel_swipe'));
+        var $carousel = $(".carousel_swipe").carousel({"interval":0});
+        var hammer_2 = new Hammer(document.querySelector('.carousel_swipe_2'));
+        var $carousel_2 = $(".carousel_swipe_2").carousel({"interval":0});
+        var hammer_3 = new Hammer(document.querySelector('.carousel_swipe_3'));
+        var $carousel_3 = $(".carousel_swipe_3").carousel({"interval":0});
+
+        console.log(hammer);
+        hammer.get("swipe");
+        hammer.on("swipeleft", function(){
+            $carousel.carousel("next");
+        });
+
+        hammer.on("swiperight", function(){
+            $carousel.carousel("prev");
+        });
+
+        hammer_2.get("swipe");
+        hammer_2.on("swipeleft", function(){
+            $carousel_2.carousel("next");
+        });
+
+        hammer_2.on("swiperight", function(){
+            $carousel_2.carousel("prev");
+        });
+
+        hammer_3.get("swipe");
+        hammer_3.on("swipeleft", function(){
+            $carousel_3.carousel("next");
+        });
+
+        hammer_3.on("swiperight", function(){
+            $carousel_3.carousel("prev");
+        });
 
 	//slick slider
 	$('.responsive-carousel').slick({

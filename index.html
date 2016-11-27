@@ -59,7 +59,7 @@
         </header>
         <main id="main">
             <div class="main-top">
-                <div id="carousel_main" class="carousel slide carousel-fade" data-ride="carousel"> 
+                <div id="carousel_main" class="carousel slide carousel-fade carousel_swipe" data-ride="carousel"> 
                     <ol class="carousel-indicators visible-xs">
                         <li data-target="#carousel_main" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel_main" data-slide-to="1"></li>
@@ -365,7 +365,7 @@
                 <div class="container">
                     <h2 class="text-center">Схема работы</h2>
                     <div class="diagram-box shadow-slyle">
-                        <div id="carousel_diagram" class="carousel slide" data-ride="carousel">
+                        <div id="carousel_diagram" class="carousel slide carousel_swipe_2" data-ride="carousel">
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
                                 <li data-target="#carousel_diagram" data-slide-to="0" class="active"><span>1</span><strong class="hidden-xs">Просчет</strong></li>
@@ -521,7 +521,7 @@
                 <div class="container">
                     <h2 class="text-center">Отзывы</h2>
                     <div class="diagram-box shadow-slyle">
-                        <div id="carousel_reviews" class="carousel slide" data-ride="carousel">
+                        <div id="carousel_reviews" class="carousel slide carousel_swipe_3" data-ride="carousel">
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner container" role="listbox">
                                 <div class="item diagram-box-content row active">
@@ -1761,7 +1761,7 @@
     </div>
 
     <!-- language menu -->
-    <div class="language-menu hidden-xs">
+    <div class="language-menu shadow-slyle hidden-xs">
         <ul>
             <li><a href="#"><img src="images/rus-lang.png" alt="image description"><span>Rus</span></a></li>
             <li><a href="#"><img src="images/eng-lang.png" alt="image description"><span>Eng</span></a></li>
@@ -1770,13 +1770,15 @@
     </div>
     
 
-
+  
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.12.3.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-select.js"></script>
+    <script src="js/hammer.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script> -->
     <!-- <script src="js/slick.min.js"></script> -->
     <script type="text/javascript" src="slick/slick.js"></script>
     <script src="js/scripts.js"></script>
