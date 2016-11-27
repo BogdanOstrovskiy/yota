@@ -1477,7 +1477,15 @@ body,
 	.navbar-inverse.stickytop .navbar-nav > li > a{
 		font-size: 14px;
 		padding-left: 10px;
-    	padding-right: 10px;
+    		padding-right: 10px;
+	}
+	.navbar-inverse.stickytop .navbar-nav > li >a.button{
+	    	height: 40px;
+    	 	margin-top: 12px;
+    		line-height: 40px;	
+	}
+	.navbar-inverse.stickytop .navbar-nav > li >a.button i{
+    		line-height: 40px;	
 	}
 	.diagram-box-text {
 	    position: relative;
