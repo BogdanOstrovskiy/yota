@@ -163,6 +163,9 @@ a.button-two,
 .visual > img{
 	display: none;
 }
+.carousel-inner>.item.next.left, .carousel-inner>.item.prev.right{
+	left: 15px;
+}
 /*--------------header---------------*/
 .header .container{
 	height: 100%;
