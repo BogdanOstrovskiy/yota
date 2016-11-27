@@ -123,10 +123,10 @@ a.button:hover,
 	        filter: brightness(120%);
 }
 .button.button-video::before{
-	content: 'play_circle_filled';
+	content: '\f144';
 	display: inline-block;
 	margin-right: 8px;
-	font-family: 'Material Icons';
+	font-family: 'FontAwesome';
 	background-color: transparent;
 	vertical-align: top;
 	font-size: 18px;
@@ -136,10 +136,10 @@ a.button:hover,
 }
 .button.button-flag	{font-size: 18px;}
 .button.button-flag::before{
-	content: 'flag';
+	content: '\f024';
 	display: inline-block;
 	margin-right: 8px;
-	font-family: 'Material Icons';
+	font-family: 'FontAwesome';
 	background-color: transparent;
 	vertical-align: top;
 	font-size: 18px;
