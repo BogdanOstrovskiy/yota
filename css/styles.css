@@ -2090,7 +2090,7 @@ body,
 		left: 50%;
 	}
 	.diagram-box .carousel-control.left{
-		left: 45%;
+		left: 46%;
 	}
 	.diagram a.button{
 		font-size: 14px;
@@ -2156,7 +2156,7 @@ body,
     padding: 55px 0;
 	}
 	.reviews .diagram-box{
-		margin: 110px -15px 35px;
+		margin: 40px -15px 35px;
 		padding-bottom: 20px;
 	}
 	.reviews .diagram-box-text {
@@ -2358,6 +2358,12 @@ body,
 	}
 	.diagram-box .carousel-indicators li + li{
 		margin-left: 25px;
+	}
+	.diagram-box .carousel-control.right{
+		left: 50%;
+	}
+	.diagram-box .carousel-control.left{
+		left: 43%;
 	}
 }
 @media only screen and (max-width: 320px){
