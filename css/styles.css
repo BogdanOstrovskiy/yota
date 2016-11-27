@@ -1447,6 +1447,12 @@ body,
 	.technology-box{
 		padding: 185px 0 70px;	
 	}
+	.header-box .button{
+   		white-space: nowrap;
+   	 	font-size: 16px;
+   	 	padding: 0 18px;
+   	 	letter-spacing: -.3px;
+	}
 	.footer-contact{
 		padding: 40px 40px 20px;
 	}
