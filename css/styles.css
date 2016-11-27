@@ -163,9 +163,6 @@ a.button-two,
 .visual > img{
 	display: none;
 }
-.carousel-inner>.item.next.left, .carousel-inner>.item.prev.right{
-	left: 15px;
-}
 /*--------------header---------------*/
 .header .container{
 	height: 100%;
@@ -627,6 +624,9 @@ a.button-two,
 }
 .diagram-box-img img{
 	margin-right: -15px;
+}
+.diagram-box .carousel-inner>.item.next.left, .carousel-inner>.item.prev.right{
+	left: 15px;
 }
 .diagram-box .carousel-control{
 	bottom: 45px;
