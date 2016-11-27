@@ -39,7 +39,6 @@ $(document).ready(function() {
         var hammer_3 = new Hammer(document.querySelector('.carousel_swipe_3'));
         var $carousel_3 = $(".carousel_swipe_3").carousel({"interval":0});
 
-        console.log(hammer);
         hammer.get("swipe");
         hammer.on("swipeleft", function(){
             $carousel.carousel("next");
@@ -109,17 +108,18 @@ $(document).ready(function() {
 	});
 	//check of conditions for a slider-2
 
-	if ($(this).width() <= 767) {
-		
-		$('.mobile-carousel').slick({
-  			dots: true,
-  			infinite: false,
-  			speed: 300,
-  			arrows: false,
-  			slidesToShow: 1,
-  			slidesToScroll: 1,
-  		});
-	}
+		if ($(this).width() <= 767) {
+			
+			$('.mobile-carousel').slick({
+  				dots: true,
+  				infinite: false,
+  				speed: 300,
+  				arrows: false,
+  				slidesToShow: 1,
+  				slidesToScroll: 1,
+  			});
+		};
+
 	//bootstrap-select
 
 	$(document).ready(function () {
@@ -180,24 +180,24 @@ $(document).ready(function() {
         });
 
         //slick nav-bar and button 
-        
-    if (!($(window).width() <= 767)) {
-        
-        $(function(){
-            var pos = $("nav.navbar").offset().top;
+    	var pos = $("nav.navbar").offset().top;
 
-            $(window).scroll(function() {
-                if($(this).scrollTop() >= (pos + 50)) {
-                    $('nav.navbar').addClass('stickytop');
-                    $('.button_hide').fadeIn().css({'display':'block'});
-                }
-                else{
-                    $('nav.navbar').removeClass('stickytop');
-                    $('.button_hide').fadeOut();
-                }
-            });
-        });
-    
-	};
+			$(window).on('resize scroll', function() {
 
+				if ($(this).width() >= 767) {
+    	    	        if($(window).scrollTop() >= (pos + 0)) {
+    	    	            $('nav.navbar').addClass('stickytop');
+    	    	            $('.button_hide').fadeIn().css({'display':'block'});
+    	    	        }
+    	    	        else{
+    	    	            $('nav.navbar').removeClass('stickytop');
+    	    	            $('.button_hide').fadeOut();
+    	    	      	};
+    		
+					} else {
+						$('nav').removeClass('stickytop');
+    		    	    $('.button_hide').fadeOut();
+				}
+			});
+		
 });

@@ -91,7 +91,7 @@ h2.dark-bg,
 h3{
 	color: #636363;
 	font-weight: 700;
-	letter-spacing: -2px;
+	letter-spacing: -.3px;
 }
 .bootstrap-select>.dropdown-toggle{
 	height: 100%;
@@ -291,8 +291,8 @@ a.button-two,
 .nav-style{
 	background-color: rgba(30, 24, 53, .4);
 	position: absolute;
-	-webkit-transition: background-color .5s;
-	transition: background-color .5s;
+	-webkit-transition: all 1s;
+	transition: all 1s;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -303,6 +303,9 @@ a.button-two,
 	color: #fff;
 	font-size: 18px;
 	font-weight: 600;
+	padding-right: 0;
+	padding-left: 0;
+	margin: 0 5px;
 }
 .navbar-centered{
 	display: -webkit-box;
@@ -331,13 +334,14 @@ a.button-two,
 .navbar-inverse .navbar-nav > .active > a:hover:not(.button)::after{
 	content: '';
 	bottom: 16px;
-	left: 15px;
 	position: absolute;
-	width: calc(100% - 30px);
+	width: 100%;
+	left: 0;
+	right: 0;
 	height: 1px;
 	background-color: #ff5b00;
 }
-.nav a.button{
+.nav li > a.button{
 	height: 50px;
 	line-height: 50px;
 	padding: 0 23px;
@@ -354,7 +358,7 @@ a.button-two,
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 50px;
+	height: 62px;
 	background-color: rgba(30, 24, 53, .9);
 }
 .carousel-control .material-icons{
@@ -1024,7 +1028,64 @@ input[type="file"]{
 	border: 2px solid #a6a6a6;
 	box-shadow: none;
 }
-
+.bootstrap-select > .dropdown-toggle:hover{
+	background-color: transparent;
+}
+.open > .dropdown-toggle.btn-default,
+.open > .dropdown-toggle.btn-default:hover,
+.open > .dropdown-toggle.btn-default:active,
+.bootstrap-select > .btn-group.open .dropdown-toggle,
+.bootstrap-select > .btn-group.open .dropdown-toggle:hover,
+.bootstrap-select > .dropdown-toggle.open,
+.bootstrap-select > .dropdown-toggle.open:active,
+.form-control button[type="button"]:focus,
+.form-control button[type="button"]:active,
+.open > .dropdown-toggle.btn-default:focus{
+	outline: none;
+	background-color: #f6f6f6;
+	box-shadow: none;
+	border: 2px solid #a6a6a6;
+}
+.bootstrap-select.form-control:focus{
+	border: 2px solid #a6a6a6;
+	outline: none;
+}
+.bootstrap-select .dropdown-toggle:focus{
+	outline: none !important;
+}
+.bootstrap-select.btn-group .dropdown-menu{
+	max-width: 100%;
+}
+.bs-searchbox input[type="text"]{
+	border-top: none; 
+	border-right: none; 
+	border-left: none; 
+	border-bottom: 1px solid #a6a6a6;
+	height: auto;
+	font-size: 14px;
+	padding-left: 22px;
+	position: relative;
+}
+.bs-searchbox::after{
+	content: '\f002';
+	font-family: 'FontAwesome';
+	font-size: 14px;
+	left: 5px;
+	top: 15px;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+	color: #999;
+}
+.dropdown-menu{
+	margin: 0;
+	border-radius: 0;
+}
+.dropdown-menu > .active > a, 
+.dropdown-menu > .active > a:hover, 
+.dropdown-menu > .active > a:focus{
+	background-color: #a6a6a6;
+}
 .form-control .caret {
   display: inline-block;
   width: 20px;
@@ -1138,6 +1199,12 @@ input[type="file"]{
 }
 .copyright{
 	color: #a5a5a5;
+}
+.slick-slide:focus,
+.slick-current:focus,
+.slick-current ul:focus,
+.slick-current div:focus{
+	outline: none;
 }
 /*------popup-------*/
 .modal-content{
@@ -1489,13 +1556,16 @@ body,
 	}
 	.navbar-inverse.stickytop .navbar-nav > li > a{
 		font-size: 14px;
-		padding-left: 10px;
-    		padding-right: 10px;
 	}
 	.navbar-inverse.stickytop .navbar-nav > li >a.button{
-	    	height: 40px;
-    	 	margin-top: 12px;
-    		line-height: 40px;	
+	    height: 40px;
+    	margin-top: 12px;
+    	line-height: 40px;	
+	}
+	.navbar-inverse .navbar-nav a:not(.button):hover::after,
+	.navbar-inverse .navbar-nav > .active > a:not(.button)::after, 
+	.navbar-inverse .navbar-nav > .active > a:hover:not(.button)::after{
+		width: 100%;
 	}
 	.navbar-inverse.stickytop .navbar-nav > li >a.button i{
     		line-height: 40px;	
@@ -1510,6 +1580,9 @@ body,
 	.carousel-control .chevron-right {
 	    right: 75%;
 	}
+	.diagram-box .carousel-indicators li::before{
+		width: calc(100%*2);
+	}
 }
 @media only screen and (max-width: 992px){
 	a:focus{
@@ -1523,13 +1596,10 @@ body,
 	}
 	.navbar-inverse.stickytop .navbar-nav > li > a{
 		font-size: 12px;
-		padding-left: 10px;
-    	padding-right: 10px;
 	}
 	.navbar-inverse .navbar-nav > li > a{
 		font-size: 16px;
-		padding-left: 5px;
-   	 	padding-right: 5px;
+		margin: 0 5px;
 	}
 	.carousel-control .chevron-left {
 	    left: 70%;
@@ -1647,6 +1717,18 @@ body,
 	.popup-video .modal-content{
 		padding-bottom: 0;
 	}
+	/*.logo-box img{
+		width: 98px;
+		height: 45px;
+	}*/
+	.header-box .brand-name strong{
+		font-size: 14px;
+    	letter-spacing: .7px;
+    	display: block;
+	}
+	/*.logo-box{
+		width: 96px;
+	}*/
 }
 
 
@@ -1858,6 +1940,10 @@ body,
 	.logo-box img{
 		width: 98px;
 		height: 45px;
+	}
+	.header-box .brand-name {
+		position: static;
+		top: auto;
 	}
 	.header-box .brand-name strong{
 		font-size: 7.63px;
@@ -2475,13 +2561,3 @@ body,
 		left: 120px;
 	}
 }
- @media only screen and (max-width: 767px), all and (orientation: landscape){
-	.navbar-inverse .navbar-nav > li > a {
-	    line-height: 26px;
-	}
-	#popup-video .modal-dialog{
-		width: 100%;
-		height: auto;
-	}
-
-} 
