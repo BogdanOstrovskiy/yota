@@ -625,12 +625,8 @@ a.button-two,
 .diagram-box-img img{
 	margin-right: -15px;
 }
-<<<<<<< HEAD
 .diagram-box .carousel-inner>.item.next.left, 
 .diagram-box .carousel-inner>.item.prev.right{
-=======
-.diagram-box .carousel-inner>.item.next.left, .carousel-inner>.item.prev.right{
->>>>>>> origin/master
 	left: 15px;
 }
 .diagram-box .carousel-control{

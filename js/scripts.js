@@ -170,14 +170,14 @@ $(document).ready(function() {
             wrap: true
         });
 
-//         $(".modal").on("show.bs.modal", function(){
-//             var $bodyWidth = $("body").width();
-//             $("body").css({'overflow-y': "hidden"}).css({'padding-right': ($("body").width()-$bodyWidth)});
-//         });
+        $(".modal").on("show.bs.modal", function(){
+            var $bodyWidth = $("body").width();
+            $("body").css({'overflow-y': "hidden"}).css({'padding-right': ($("body").width()-$bodyWidth)});
+        });
         
-//         $(".modal").on("hidden.bs.modal", function(){
-//             $("body").css({'padding-right': "0", 'overflow-y': "auto"});
-//         });
+        $(".modal").on("hidden.bs.modal", function(){
+            $("body").css({'padding-right': "0", 'overflow-y': "auto"});
+        });
 
         //slick nav-bar and button 
         
