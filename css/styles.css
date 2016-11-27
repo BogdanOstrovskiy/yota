@@ -1972,7 +1972,7 @@ body,
 	}
 	.technology-img {
 	    width: 100%;
-	    top: -150px;
+	    top: -145px;
 	}
 	.technology-box li > span{
 		font-size: 13px;
@@ -2334,6 +2334,24 @@ body,
 	}
 
 }
+@media only screen and (max-width: 680px){
+	.technology-img {
+	    width: 100%;
+	    top: -140px;
+	}
+}
+@media only screen and (max-width: 600px){
+	.technology-img {
+	    width: 100%;
+	    top: -110px;
+	}
+}
+@media only screen and (max-width: 480px){
+	.technology-img {
+	    width: 100%;
+	    top: -110px;
+	}
+}
 @media only screen and (max-width: 440px){
 	.diagram-box .carousel-indicators{
 		justify-content: center;
@@ -2360,10 +2378,10 @@ body,
 		left: 155px;
 	}
 	.diagram-box .carousel-control.left{
-		left: 130px;
+		left: 120px;
 	}
 }
-@media only screen and (max-width: 320px) and (orientation:landscape){
+@media only screen and (max-width: 320px), all and (orientation: landscape){
 	.navbar-inverse .navbar-nav > li > a {
 	    font-size: 15px;
 	    line-height: 28px;
