@@ -1445,9 +1445,15 @@ body,
 @media only screen and (max-width: 1200px){
 	.header-box .button{
    		white-space: nowrap;
-   	 	font-size: 16px;
+   	 	font-size: 14px;
    	 	padding: 0 18px;
    	 	letter-spacing: -.3px;
+		height: 45px;
+   		line-height: 45px;
+		margin: 0;
+	}
+	.header-box .button i{
+		line-height: 45px;
 	}
 }
 @media only screen and (max-width: 1170px){
@@ -1456,9 +1462,14 @@ body,
 	}
 	.header-box .button{
    		white-space: nowrap;
-   	 	font-size: 16px;
+   	 	font-size: 14px;
    	 	padding: 0 18px;
    	 	letter-spacing: -.3px;
+		height: 45px;
+    		line-height: 45px;
+	}
+	.header-box .button i{
+		line-height: 45px;
 	}
 	.footer-contact{
 		padding: 40px 40px 20px;
