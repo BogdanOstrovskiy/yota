@@ -1828,6 +1828,8 @@ body,
 	.navbar-collapse{
 		width: 100vw;
 		padding: 0;
+		height: calc(100vh - 78px) !important;
+    	overflow: hidden;
 	}
 	.navbar-header .navbar-toggle{
 		margin-top: 22px;
