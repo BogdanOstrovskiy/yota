@@ -67,7 +67,7 @@ $(document).ready(function() {
         });
 
 	//slick slider
-	$('.responsive-carousel').slick({
+	$('.responsive-carousel:not(.mobile-carousel)').slick({
   		dots: false,
   		infinite: false,
   		speed: 300,
@@ -106,19 +106,6 @@ $(document).ready(function() {
   		  	// instead of a settings object
   		]
 	});
-	//check of conditions for a slider-2
-	
-		// if ($(window).width() <= 767) {
-			
-		// 	$('.mobile-carousel').slick({
-  // 				dots: true,
-  // 				infinite: false,
-  // 				speed: 300,
-  // 				arrows: false,
-  // 				slidesToShow: 1,
-  // 				slidesToScroll: 1,
-  // 			});
-		// };
 
 	//bootstrap-select
 
@@ -202,35 +189,35 @@ $(document).ready(function() {
 		
 });
 
-
-	var n = 1;
-	var k = 1;
-
-$(window).on('resize load', function() {
-
-var res = $(window).width(); 
-	if (!!(res >= 767) && !!(n = 1)) {
-			
-				$('.mobile-carousel').slick('unslick');
-				k = 1;
-				n = 2;
-		};
-
-	if (!!(res <= 767) && !!(k = 1)) {
-
-		$('.mobile-carousel').slick({
+//check of conditions for a slider-2
+	var n = false , k = true;
+	var objSlick = {
   				dots: true,
   				infinite: false,
   				speed: 300,
   				arrows: false,
   				slidesToShow: 1,
   				slidesToScroll: 1,
-  			});
-  			n = 1;
-  			k = 2;
-		};
-	
+  			};
 
+$(window).on('resize load', function() {
+var iniSlickClass= $('.mobile-carousel.slick-initialized');
+var res = $(window).width(); 
+	if ((res >= 767) && n && iniSlickClass) {
+		
+				$('.mobile-carousel').slick('unslick');
+
+				k = true;
+				n = false;
+		};
+
+	if ((res <= 767) && k) {
+
+	
+		$('.mobile-carousel').slick(objSlick);
+	
+  			n = true;
+  			k = false;
+		};
 
 	});
-
