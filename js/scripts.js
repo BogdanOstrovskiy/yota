@@ -107,18 +107,18 @@ $(document).ready(function() {
   		]
 	});
 	//check of conditions for a slider-2
-
-		if ($(this).width() <= 767) {
+	
+		// if ($(window).width() <= 767) {
 			
-			$('.mobile-carousel').slick({
-  				dots: true,
-  				infinite: false,
-  				speed: 300,
-  				arrows: false,
-  				slidesToShow: 1,
-  				slidesToScroll: 1,
-  			});
-		};
+		// 	$('.mobile-carousel').slick({
+  // 				dots: true,
+  // 				infinite: false,
+  // 				speed: 300,
+  // 				arrows: false,
+  // 				slidesToShow: 1,
+  // 				slidesToScroll: 1,
+  // 			});
+		// };
 
 	//bootstrap-select
 
@@ -201,3 +201,36 @@ $(document).ready(function() {
 			});
 		
 });
+
+
+	var n = 1;
+	var k = 1;
+
+$(window).on('resize load', function() {
+
+var res = $(window).width(); 
+	if (!!(res >= 767) && !!(n = 1)) {
+			
+				$('.mobile-carousel').slick('unslick');
+				k = 1;
+				n = 2;
+		};
+
+	if (!!(res <= 767) && !!(k = 1)) {
+
+		$('.mobile-carousel').slick({
+  				dots: true,
+  				infinite: false,
+  				speed: 300,
+  				arrows: false,
+  				slidesToShow: 1,
+  				slidesToScroll: 1,
+  			});
+  			n = 1;
+  			k = 2;
+		};
+	
+
+
+	});
+
